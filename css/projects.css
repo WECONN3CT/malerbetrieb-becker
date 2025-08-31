@@ -73,6 +73,7 @@
     gap: 40px; /* Increased from var(--spacing-xl) to 40px */
     row-gap: 40px; /* Explicit row gap for better vertical spacing */
     margin-top: 0; /* Remove extra margin since filter has margin-bottom */
+    align-items: stretch; /* ensure cards stretch to equal height per row */
 }
 
 /* Project Card */
@@ -85,6 +86,9 @@
     animation: fadeIn 0.5s ease;
     border: 1px solid rgba(0, 122, 255, 0.08);
     position: relative;
+    display: flex;            /* equalize card heights */
+    flex-direction: column;   /* stack image and content */
+    height: 100%;
 }
 
 .project-card::before {
@@ -118,7 +122,7 @@
 /* Project Image */
 .project-image {
     position: relative;
-    height: 250px;
+    height: 320px;            /* unified image height across all cards */
     overflow: hidden;
     background: var(--gray-200);
 }
@@ -134,9 +138,41 @@
     transform: scale(1.1);
 }
 
+/* Uniform content area for all cards */
+.project-info {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    min-height: 200px; /* ensures consistent card height */
+}
+
+.project-info h3 {
+    font-size: var(--font-size-xl);
+    margin: 0;
+    color: var(--dark);
+}
+
+.project-info .project-location {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.project-info .project-description {
+    color: var(--gray-700);
+    line-height: 1.6;
+    /* clamp to avoid variable heights from long text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* Before/After full-view: show entire image without cropping */
 .project-card:has(.project-badge) .project-image {
-    height: 320px;
     background: var(--gray-100);
 }
 
@@ -158,6 +194,10 @@
 .project-card:hover .project-image img[src*="bilder-vorher-nacher"] {
     transform: none;
 }
+
+/* Normalize special large gallery card to standard dimensions */
+.project-card-large .gallery-thumbs { display: none; }
+.project-card-large .gallery-main .project-image { height: 320px; }
 
 .project-overlay {
     position: absolute;
