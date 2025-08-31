@@ -134,6 +134,31 @@
     transform: scale(1.1);
 }
 
+/* Before/After full-view: show entire image without cropping */
+.project-card:has(.project-badge) .project-image {
+    height: 320px;
+    background: var(--gray-100);
+}
+
+.project-card:has(.project-badge) .project-image img {
+    object-fit: contain;
+}
+
+.project-card:has(.project-badge):hover .project-image img {
+    transform: none;
+}
+
+/* Fallback selector by image path for browsers without :has support */
+.project-image img[src*="Vorher Nacher"],
+.project-image img[src*="bilder-vorher-nacher"] {
+    object-fit: contain;
+}
+
+.project-card:hover .project-image img[src*="Vorher Nacher"],
+.project-card:hover .project-image img[src*="bilder-vorher-nacher"] {
+    transform: none;
+}
+
 .project-overlay {
     position: absolute;
     top: 0;
