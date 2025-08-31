@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Malerbetrieb Becker</title>
+    <meta name="description" content="Kontaktieren Sie Malerbetrieb Becker in Bonn. Wir beraten Sie gerne zu Ihrem Projekt. Telefon: 0176 40497535">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/contact-professional.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Malerbetrieb Becker Logo" class="logo-img">
+                <span class="logo-text">Malerbetrieb Becker</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Startseite</a>
+                <a href="index.html#leistungen" class="nav-link">Leistungen</a>
+                <a href="projekte.html" class="nav-link">Projekte</a>
+                <a href="kontakt.html" class="nav-link active">Kontakt</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="service-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Startseite</a>
+                <span>/</span>
+                <span>Kontakt</span>
+            </div>
+            <h1>Kontakt</h1>
+            <p class="service-subtitle">Wir freuen uns auf Ihre Anfrage und beraten Sie gerne zu Ihrem Projekt</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-main">
+                    <div class="service-intro">
+                        <h2>Schreiben Sie uns</h2>
+                        <p>Nutzen Sie unser Kontaktformular für eine schnelle und unkomplizierte Anfrage. Wir melden uns umgehend bei Ihnen zurück und besprechen gerne alle Details zu Ihrem Projekt.</p>
+                        <p>Alternativ erreichen Sie uns auch telefonisch oder per E-Mail. Wir stehen Ihnen für alle Fragen rund um Malerarbeiten, Renovierungen und Sanierungen zur Verfügung.</p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                    <span class="error-message">Bitte geben Sie Ihren Namen ein</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Telefon</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-Mail *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <span class="error-message">Bitte geben Sie eine gültige E-Mail-Adresse ein</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Betreff</label>
+                                <input type="text" id="subject" name="subject" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service" class="form-label">Gewünschte Leistung</label>
+                                <select id="service" name="service" class="form-input">
+                                    <option value="">Bitte wählen...</option>
+                                    <option value="wandgestaltung">Wandgestaltung</option>
+                                    <option value="fassadengestaltung">Fassadengestaltung</option>
+                                    <option value="lackierarbeiten">Lackierarbeiten</option>
+                                    <option value="bodenverlegung">Bodenverlegung</option>
+                                    <option value="schimmelsanierung">Schimmelsanierung</option>
+                                    <option value="renovierung">Komplettrenovierung</option>
+                                    <option value="spachtelarbeiten">Spachtelarbeiten</option>
+                                    <option value="kleinauftrag">Kleinauftragsdienst</option>
+                                    <option value="andere">Andere</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Nachricht *</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                                <span class="error-message">Bitte geben Sie eine Nachricht ein</span>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">
+                                    Ich bin damit einverstanden, dass meine Daten zum Zweck der Kontaktaufnahme gespeichert und verarbeitet werden. 
+                                    Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> zur Kenntnis genommen. *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                Nachricht senden
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="service-sidebar">
+                    <div class="sidebar-card">
+                        <h3>📞 Telefon</h3>
+                        <div class="contact-detail">
+                            <a href="tel:017640497535" class="contact-link">0176 40497535</a>
+                            <p class="contact-hours">Mo-Fr: 8:00 - 18:00 Uhr<br>Sa: 9:00 - 14:00 Uhr</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>📧 E-Mail</h3>
+                        <div class="contact-detail">
+                            <a href="mailto:info@maler-becker-bonn.de" class="contact-link">info@maler-becker-bonn.de</a>
+                            <p class="contact-hours">Wir antworten innerhalb von 24 Stunden</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>📍 Anschrift</h3>
+                        <div class="contact-detail">
+                            <p><strong>Maler- und Lackierermeister<br>Steven Becker</strong></p>
+                            <p>Pappelweg 30<br>53177 Bonn</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card highlight">
+                        <h3>🚗 Einsatzgebiet</h3>
+                        <div class="contact-detail">
+                            <p>Bonn und Umgebung<br>Rhein-Sieg-Kreis<br>Bad Godesberg, Beuel<br>und weitere Regionen</p>
+                            <p class="contact-note">Termine nach Vereinbarung auch außerhalb der Geschäftszeiten möglich.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>So finden Sie uns</h2>
+                <p class="section-subtitle">Besuchen Sie uns in unserem Büro oder vereinbaren Sie einen Termin vor Ort</p>
+            </div>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.8297091057!2d7.1234567!3d50.6789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQwJzQ0LjAiTiA3wrAwNycyNC40IkU!5e0!3m2!1sde!2sde!4v1234567890"
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 16px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Schnelle und zuverlässige Malerarbeiten</h2>
+                <p>Wir sind Ihr Partner für alle Maler- und Lackierarbeiten in Bonn und Umgebung.</p>
+                <a href="tel:017640497535" class="btn btn-white">Jetzt anrufen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Malerbetrieb Becker</h4>
+                    <p>Maler- und Lackierermeister<br>Steven Becker</p>
+                    <p class="footer-contact">
+                        <strong>Telefon:</strong> <a href="tel:017640497535">0176 40497535</a><br>
+                        <strong>E-Mail:</strong> <a href="mailto:info@maler-becker-bonn.de">info@maler-becker-bonn.de</a><br>
+                        <strong>Anschrift:</strong> Pappelweg 30, 53177 Bonn
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Leistungen</h4>
+                    <ul>
+                        <li><a href="leistungen/wandgestaltung.html">Wandgestaltung</a></li>
+                        <li><a href="leistungen/fassadengestaltung.html">Fassadengestaltung</a></li>
+                        <li><a href="leistungen/lackierarbeiten.html">Lackierarbeiten</a></li>
+                        <li><a href="leistungen/bodenverlegung.html">Bodenverlegung</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Weitere Services</h4>
+                    <ul>
+                        <li><a href="leistungen/schimmelsanierung.html">Schimmelsanierung</a></li>
+                        <li><a href="leistungen/renovierung.html">Komplettrenovierung</a></li>
+                        <li><a href="leistungen/spachtelarbeiten.html">Spachtelarbeiten</a></li>
+                        <li><a href="leistungen/kleinauftraege.html">Kleinauftragsdienst</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Malerbetrieb Becker. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

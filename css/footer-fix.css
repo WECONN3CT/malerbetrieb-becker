@@ -1,0 +1,59 @@
+/* Footer Visibility Fix - Ensure footer is always visible */
+
+.footer {
+    position: relative !important;
+    z-index: 100 !important;
+    margin-top: 0 !important;
+    clear: both !important;
+}
+
+/* Ensure no background elements cover the footer */
+body {
+    position: relative;
+}
+
+/* Fix any potential overlay issues */
+.hero,
+.hero-slider,
+.hero-overlay,
+.page-hero,
+.projects-section {
+    position: relative;
+    z-index: auto;
+}
+
+/* Ensure footer content is visible */
+.footer-content,
+.footer-brand,
+.footer-column,
+.footer-bottom {
+    position: relative;
+    z-index: 101;
+}
+
+/* Remove any potential margin collapse issues */
+.footer {
+    margin-top: 0;
+    padding-top: var(--spacing-2xl, 64px);
+}
+
+/* Ensure footer background is solid */
+.footer {
+    background: var(--bg-dark, #2c3e50) !important;
+    color: white !important;
+}
+
+/* Fix any potential overflow issues */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Ensure sections don't overlap footer */
+.projects-section,
+.page-hero,
+.content-section {
+    margin-bottom: 0;
+    padding-bottom: var(--spacing-xl, 48px);
+}
+
+

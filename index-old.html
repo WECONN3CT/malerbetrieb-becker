@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malerbetrieb Becker - Ihr Malermeister in Bonn</title>
+    <meta name="description" content="Ihr zuverlässiger Malerbetrieb für Bonn, den Rhein-Sieg-Kreis und die umliegenden Regionen. Hochwertige Maler-, Tapezier- und Renovierungsarbeiten.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/professional.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Malerbetrieb Becker Logo" class="logo-img painter-logo">
+                <span class="logo-text">Malerbetrieb Becker</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Startseite</a>
+                <a href="#leistungen" class="nav-link">Leistungen</a>
+                <a href="projekte.html" class="nav-link">Projekte</a>
+                <a href="kontakt.html" class="nav-link">Kontakt</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+                        <div class="hero-background"></div>
+        
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>Zertifizierter Meisterbetrieb seit 2010</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-line-1">Professionelle</span>
+                        <span class="title-line-2">Malerarbeiten</span>
+                        <span class="title-line-3">in Bonn</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Verwandeln Sie Ihre Räume mit höchster Handwerkskunst. 
+                        Als Meisterbetrieb garantieren wir perfekte Ergebnisse 
+                        und termingerechte Ausführung.
+                    </p>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon tool-icon paint-splash">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 20H8L18.5 9.5C19.328 8.672 19.328 7.328 18.5 6.5L17.5 5.5C16.672 4.672 15.328 4.672 14.5 5.5L4 16V20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <span>Kostenlose Fachberatung</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon tool-icon paint-splash">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L4 7V11C4 15.42 6.67 19.44 10.4 21.35L12 22L13.6 21.35C17.33 19.44 20 15.42 20 11V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Vollversichert & Garantie</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon tool-icon paint-splash">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Termingerechte Ausführung</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="kontakt.html" class="btn-primary-new">
+                            <span class="btn-text">Kostenloses Angebot anfordern</span>
+                            <div class="btn-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-info">
+                            <div class="contact-label">Oder direkt anrufen:</div>
+                            <a href="tel:017640497535" class="phone-number">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7294C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5342 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.89391 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                0176 40497535
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">Zufriedene Kunden</div>
+                            <div class="stat-bar"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="14">0</div>
+                            <div class="stat-label">Jahre Erfahrung</div>
+                            <div class="stat-bar"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" data-target="48">0</div>
+                            <div class="stat-label">Stunden Garantie</div>
+                            <div class="stat-bar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image-placeholder">
+                        <div class="image-frame">
+                            <img src="images/Vorher Nacher/Simple Before After Slider Instagram Post.png" alt="Vorher-Nachher Beispiel" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Google Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-header">
+                <div class="google-rating">
+                    <div class="rating-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-logo">
+                        <div class="rating-info">
+                            <div class="rating-stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                            </div>
+                            <div class="rating-text">
+                                <span class="rating-score">4.9</span>
+                                <span class="rating-count">aus 47 Bewertungen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Was unsere Kunden sagen</h2>
+                <p class="section-subtitle">Echte Bewertungen von zufriedenen Kunden aus Bonn und Umgebung</p>
+            </div>
+            
+            <div class="reviews-slider">
+                <div class="review-card active">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">M</div>
+                            <div class="reviewer-details">
+                                <h4>Michael Weber</h4>
+                                <p>Bonn Bad Godesberg</p>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Herr Becker hat unsere komplette Wohnung gestrichen. Sehr saubere Arbeit, pünktlich und zuverlässig. Die Farbberatung war excellent und das Ergebnis übertrifft unsere Erwartungen. Absolut empfehlenswert!"</p>
+                    <div class="review-date">vor 2 Wochen</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">S</div>
+                            <div class="reviewer-details">
+                                <h4>Sandra Müller</h4>
+                                <p>Bonn Beuel</p>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Professionelle Fassadensanierung unseres Einfamilienhauses. Von der Beratung bis zur Ausführung alles perfekt. Faire Preise und top Qualität. Gerne wieder!"</p>
+                    <div class="review-date">vor 1 Monat</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">T</div>
+                            <div class="reviewer-details">
+                                <h4>Thomas Klein</h4>
+                                <p>Rhein-Sieg-Kreis</p>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+                        </div>
+                    </div>
+                    <p class="review-text">"Schnelle Terminvergabe, kompetente Beratung und handwerklich einwandfreie Arbeit. Herr Becker ist sehr freundlich und arbeitet äußerst sauber. Vielen Dank!"</p>
+                    <div class="review-date">vor 3 Wochen</div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn prev" onclick="changeReview(-1)">‹</button>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentReview(1)"></span>
+                    <span class="dot" onclick="currentReview(2)"></span>
+                    <span class="dot" onclick="currentReview(3)"></span>
+                </div>
+                <button class="slider-btn next" onclick="changeReview(1)">›</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Über uns Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Malermeister Steven Becker</h2>
+                <p class="section-subtitle">Ihr Partner für perfekte Oberflächen in Bonn und Umgebung</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-intro">
+                        <h3>14 Jahre Leidenschaft für perfekte Malerarbeiten</h3>
+                        <p class="lead">Als Maler- und Lackierermeister bringe ich über ein Jahrzehnt Erfahrung und Leidenschaft für das Handwerk mit. Jeder Pinselstrich, jede Farbwahl und jede Oberflächenbehandlung erfolgt mit höchster Präzision und Liebe zum Detail.</p>
+                    </div>
+                    
+                    <div class="expertise-grid">
+                                            <div class="expertise-item">
+                        <div class="expertise-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 12C2 17.5228 6.47715 22 12 22C13.6569 22 15 20.6569 15 19V19C15 17.8954 15.8954 17 17 17H19C20.6569 17 22 15.6569 22 14C22 8.47715 17.5228 4 12 4C6.47715 4 2 8.47715 2 12Z" stroke="#007AFF" stroke-width="1.5"/>
+                                <circle cx="8" cy="12" r="1.5" fill="#007AFF"/>
+                                <circle cx="12" cy="8" r="1.5" fill="#007AFF"/>
+                                <circle cx="16" cy="12" r="1.5" fill="#007AFF"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Kreative Wandgestaltung</h4>
+                            <p>Von klassisch bis modern – wir setzen Ihre Wohnträume in Farbe um</p>
+                        </div>
+                    </div>
+                    <div class="expertise-item">
+                        <div class="expertise-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 21H21M4 21V7L12 3L20 7V21" stroke="#007AFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="10" y="14" width="4" height="7" stroke="#007AFF" stroke-width="1.5"/>
+                                <rect x="7" y="9" width="3" height="3" stroke="#007AFF" stroke-width="1.5"/>
+                                <rect x="14" y="9" width="3" height="3" stroke="#007AFF" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Fassadensanierung</h4>
+                            <p>Wetterfester Schutz und neue Optik für Ihr Zuhause</p>
+                        </div>
+                    </div>
+                    <div class="expertise-item">
+                        <div class="expertise-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.7 6.3C15.1 6.7 15.1 7.3 14.7 7.7L7.7 14.7C7.3 15.1 6.7 15.1 6.3 14.7L2.3 10.7C1.9 10.3 1.9 9.7 2.3 9.3C2.7 8.9 3.3 8.9 3.7 9.3L7 12.6L13.3 6.3C13.7 5.9 14.3 5.9 14.7 6.3Z" fill="#007AFF"/>
+                                <path d="M22 12L16 18L13 15" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Komplettservice</h4>
+                            <p>Alles aus einer Hand – von der Beratung bis zur Fertigstellung</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <div class="placeholder-content">
+                            <div class="placeholder-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="8" r="4" stroke="#9CA3AF" stroke-width="2"/>
+                                <path d="M6 21V19C6 16.7909 7.79086 15 10 15H14C16.2091 15 18 16.7909 18 19V21" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M15 11L17 13L21 9" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                            <p>Foto von Steven Becker<br>bei der Arbeit</p>
+                        </div>
+                    </div>
+                    <div class="about-badges">
+                        <div class="badge">
+                            <span class="badge-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L13.09 8.26L19 9L14 14L15.45 20.22L12 17L8.55 20.22L10 14L5 9L10.91 8.26L12 2Z" fill="#007AFF"/>
+                                </svg>
+                            </span>
+                            <span>Meisterbetrieb</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#007AFF" stroke-width="2"/>
+                                    <circle cx="12" cy="10" r="3" stroke="#007AFF" stroke-width="2"/>
+                                </svg>
+                            </span>
+                            <span>Regional in Bonn</span>
+                        </div>
+                        <div class="badge">
+                            <span class="badge-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#fbbf24"/>
+                                </svg>
+                            </span>
+                            <span>4.9 Bewertung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leistungen Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unsere Leistungen</h2>
+                <p class="section-subtitle">Professionelle Handwerkskunst für Ihr Projekt</p>
+            </div>
+            <div class="services-grid">
+                <a href="leistungen/wandgestaltung.html" class="service-card">
+                    <div class="service-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12C2 17.5228 6.47715 22 12 22C13.6569 22 15 20.6569 15 19V19C15 17.8954 15.8954 17 17 17H19C20.6569 17 22 15.6569 22 14C22 8.47715 17.5228 4 12 4C6.47715 4 2 8.47715 2 12Z" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                            <circle cx="12" cy="8" r="1.5" fill="currentColor"/>
+                            <circle cx="16" cy="12" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Wandgestaltung</h3>
+                    <p>Kreative und klassische Wandgestaltung für einzigartige Räume</p>
+                    <span class="service-link">Mehr erfahren →</span>
+                </a>
+                <a href="leistungen/fassadengestaltung.html" class="service-card">
+                    <div class="service-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 21H21M4 21V7L12 3L20 7V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="10" y="14" width="4" height="7" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="7" y="9" width="3" height="3" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="14" y="9" width="3" height="3" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Fassadengestaltung</h3>
+                    <p>Wetterfester und farbintensiver Fassadenanstrich</p>
+                    <span class="service-link">Mehr erfahren →</span>
+                </a>
+                <a href="leistungen/lackierarbeiten.html" class="service-card">
+                    <div class="service-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 20H8L18.5 9.5C19.328 8.672 19.328 7.328 18.5 6.5L17.5 5.5C16.672 4.672 15.328 4.672 14.5 5.5L4 16V20Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Lackierarbeiten</h3>
+                    <p>Präzise Lackier- und Lasurarbeiten für perfekte Oberflächen</p>
+                    <span class="service-link">Mehr erfahren →</span>
+                </a>
+                <a href="leistungen/bodenverlegung.html" class="service-card">
+                    <div class="service-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="10" width="18" height="11" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M7 10V7C7 5.89543 7.89543 5 9 5H15C16.1046 5 17 5.89543 17 7V10" stroke="currentColor" stroke-width="1.5"/>
+                            <line x1="7" y1="15" x2="17" y2="15" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Bodenverlegung</h3>
+                    <p>Professionelle Verlegung von Designbelag bis Laminat</p>
+                    <span class="service-link">Mehr erfahren →</span>
+                </a>
+                <a href="leistungen/schimmelsanierung.html" class="service-card">
+                    <div class="service-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L4 7V11C4 15.42 6.67 19.44 10.4 21.35L12 22L13.6 21.35C17.33 19.44 20 15.42 20 11V7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Schimmelsanierung</h3>
+                    <p>Fachgerechte Schimmelbeseitigung für gesundes Wohnen</p>
+                    <span class="service-link">Mehr erfahren →</span>
+                </a>
+                <a href="leistungen/renovierung.html" class="service-card">
+                    <div class="service-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Komplettrenovierung</h3>
+                    <p>Haus- und Wohnungsrenovierung aus einer Hand</p>
+                    <span class="service-link">Mehr erfahren →</span>
+                </a>
+            </div>
+            <div class="services-cta">
+                <a href="leistungen.html" class="btn btn-outline">Alle Leistungen ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-background">
+            <div class="cta-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <span>Kostenlose Beratung</span>
+                </div>
+                <h2>Verwandeln Sie Ihr Zuhause</h2>
+                <p class="cta-subtitle">Lassen Sie uns gemeinsam Ihre Wohnträume verwirklichen. Profitieren Sie von unserer Erfahrung und erhalten Sie ein unverbindliches Angebot.</p>
+                
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <div class="feature-check">✓</div>
+                        <span>Kostenlose Vor-Ort-Beratung</span>
+                    </div>
+                    <div class="cta-feature">
+                        <div class="feature-check">✓</div>
+                        <span>Transparente Preisgestaltung</span>
+                    </div>
+                    <div class="cta-feature">
+                        <div class="feature-check">✓</div>
+                        <span>Termingerechte Ausführung</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="kontakt.html" class="btn btn-white btn-large">
+                        <span>Kostenloses Angebot anfordern</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="cta-contact">
+                        <span class="contact-label">Oder direkt anrufen:</span>
+                        <a href="tel:017640497535" class="contact-phone">0176 40497535</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Malerbetrieb Becker</h4>
+                    <p>Maler- und Lackierermeister<br>Steven Becker</p>
+                    <p class="footer-contact">
+                        <strong>Telefon:</strong> <a href="tel:017640497535">0176 40497535</a><br>
+                        <strong>E-Mail:</strong> <a href="mailto:info@maler-becker-bonn.de">info@maler-becker-bonn.de</a><br>
+                        <strong>Anschrift:</strong> Pappelweg 30, 53177 Bonn
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Leistungen</h4>
+                    <ul>
+                        <li><a href="leistungen/wandgestaltung.html">Wandgestaltung</a></li>
+                        <li><a href="leistungen/fassadengestaltung.html">Fassadengestaltung</a></li>
+                        <li><a href="leistungen/lackierarbeiten.html">Lackierarbeiten</a></li>
+                        <li><a href="leistungen/bodenverlegung.html">Bodenverlegung</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Weitere Services</h4>
+                    <ul>
+                        <li><a href="leistungen/schimmelsanierung.html">Schimmelsanierung</a></li>
+                        <li><a href="leistungen/renovierung.html">Komplettrenovierung</a></li>
+                        <li><a href="leistungen/spachtelarbeiten.html">Spachtelarbeiten</a></li>
+                        <li><a href="leistungen/kleinauftraege.html">Kleinauftragsdienst</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Malerbetrieb Becker. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global functions for review slider
+        let currentReviewIndex = 0;
+        
+        function changeReview(direction) {
+            const reviews = document.querySelectorAll('.review-card');
+            if (reviews.length === 0) return;
+            
+            let newIndex = currentReviewIndex + direction;
+            
+            if (newIndex >= reviews.length) {
+                newIndex = 0;
+            } else if (newIndex < 0) {
+                newIndex = reviews.length - 1;
+            }
+            
+            showReview(newIndex);
+        }
+        
+        function currentReview(index) {
+            showReview(index - 1);
+        }
+        
+        function showReview(index) {
+            const reviews = document.querySelectorAll('.review-card');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (reviews.length === 0) return;
+            
+            reviews.forEach((review, i) => {
+                review.classList.remove('active');
+                if (i === index) {
+                    setTimeout(() => {
+                        review.classList.add('active');
+                    }, 100);
+                }
+            });
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentReviewIndex = index;
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
