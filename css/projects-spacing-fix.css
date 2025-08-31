@@ -98,12 +98,12 @@
 
 /* Large Project Card Spacing */
 .project-card-large {
-    grid-column: span 2;
-    min-height: 500px;
+    grid-column: auto; /* align with standard cards */
+    min-height: auto;  /* remove forced height */
 }
 
 .project-card-large .project-info {
-    padding: 32px; /* Extra padding for large cards */
+    padding: 24px; /* match standard card padding */
 }
 
 /* Project Stats Spacing */
@@ -174,7 +174,7 @@
     }
     
     .project-card-large {
-        grid-column: span 1; /* Single column on tablet */
+        grid-column: auto; /* match standard behavior */
     }
 }
 
@@ -251,7 +251,7 @@
     }
     
     .project-card-large {
-        min-height: 400px;
+        min-height: auto;
     }
     
     .project-card-large .project-info {

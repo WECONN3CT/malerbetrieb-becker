@@ -2,8 +2,8 @@
 
 /* Large Project Card for Komplettlösungen */
 .project-card-large {
-    grid-column: span 2;
-    min-height: 500px;
+    grid-column: auto; /* align with standard cards */
+    min-height: auto;  /* use natural height */
 }
 
 .project-gallery {
@@ -174,7 +174,7 @@
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
     .project-card-large {
-        grid-column: span 1;
+        grid-column: auto;
     }
     
     .projects-grid {
@@ -241,7 +241,7 @@
     }
     
     .project-card-large {
-        min-height: 400px;
+        min-height: auto;
     }
     
     .project-gallery {
