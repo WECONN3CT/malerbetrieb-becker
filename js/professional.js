@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initAnimations();
     initContactForm();
+    initGalleryLinks();
 });
 
 // Navigation scroll effect
@@ -174,6 +175,18 @@ function initAnimations() {
     document.querySelectorAll('.service-card').forEach(el => observer.observe(el));
     document.querySelectorAll('.gallery-item').forEach(el => observer.observe(el));
     document.querySelectorAll('.stat-value').forEach(el => observer.observe(el));
+}
+
+// Make homepage gallery items link to projects page
+function initGalleryLinks() {
+    const items = document.querySelectorAll('.gallery-item');
+    if (!items.length) return;
+    items.forEach(item => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function() {
+            window.location.href = 'projekte.html';
+        });
+    });
 }
 
 // Counter animation
