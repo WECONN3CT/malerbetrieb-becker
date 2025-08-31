@@ -177,6 +177,17 @@ function initAnimations() {
     document.querySelectorAll('.stat-value').forEach(el => observer.observe(el));
 }
 
+// Simple horizontal scroll for reviews
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('reviewsTrack');
+    const prev = document.querySelector('.reviews-prev');
+    const next = document.querySelector('.reviews-next');
+    if (!track || !prev || !next) return;
+    const scrollAmount = 320;
+    prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+});
+
 // Make homepage gallery items link to projects page
 function initGalleryLinks() {
     const items = document.querySelectorAll('.gallery-item');

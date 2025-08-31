@@ -371,6 +371,94 @@ a {
 }
 
 /* ===== SERVICES SECTION ===== */
+.google-reviews-section {
+    padding: var(--spacing-2xl) 0;
+    background: #fff;
+}
+
+.reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.reviews-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.reviews-nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.reviews-cta {
+    background: #FF6B35;
+    border-color: #FF6B35;
+    color: #fff;
+}
+
+.reviews-cta:hover {
+    filter: brightness(0.95);
+}
+
+.reviews-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 1fr);
+    gap: var(--spacing-lg);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--spacing-md);
+}
+
+.reviews-track::-webkit-scrollbar { height: 8px; }
+.reviews-track::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 6px; }
+
+.review-card {
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    scroll-snap-align: start;
+}
+
+.review-stars span { color: #FFB703; letter-spacing: 2px; }
+
+.review-meta {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: baseline;
+    margin: var(--spacing-sm) 0 var(--spacing-md);
+}
+
+.review-name { font-weight: 700; }
+.review-time { color: var(--gray-600); font-size: 0.9rem; }
+
+.review-text {
+    color: var(--gray-700);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .reviews-header { flex-direction: column; align-items: flex-start; gap: var(--spacing-sm); }
+    .reviews-actions { width: 100%; justify-content: space-between; }
+    .reviews-track { grid-auto-columns: 85%; }
+}
 .services-section {
     padding: var(--spacing-3xl) 0;
     background: var(--bg-light);
