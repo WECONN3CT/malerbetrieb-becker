@@ -198,6 +198,7 @@
 /* Normalize special large gallery card to standard dimensions */
 .project-card-large .gallery-thumbs { display: none; }
 .project-card-large .gallery-main .project-image { height: 320px; }
+.project-card-large .project-stats { display: none; }
 
 .project-overlay {
     position: absolute;
