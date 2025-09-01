@@ -112,3 +112,4 @@
 The navigation now works exactly as intended - "Leistungen" is a section on the homepage with beautiful image cards, and all navigation properly directs users to this central services overview!
 
 
+

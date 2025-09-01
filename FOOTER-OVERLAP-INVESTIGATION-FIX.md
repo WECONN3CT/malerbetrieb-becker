@@ -149,3 +149,4 @@ The **projekte.html** (Referenzen page) now has:
 The footer is now completely visible, properly positioned, and functions perfectly without any overlapping elements or layout issues!
 
 
+

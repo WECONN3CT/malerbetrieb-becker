@@ -132,3 +132,4 @@ The footer in **projekte.html** now:
 The footer transformation is complete - projekte.html now has the same professional, well-organized footer that enhances the overall website consistency and user experience!
 
 
+

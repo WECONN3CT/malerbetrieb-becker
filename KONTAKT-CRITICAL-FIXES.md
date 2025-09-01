@@ -176,3 +176,4 @@
 The contact page now looks professional and functions perfectly with a clearly defined form and fully readable content that maintains the established Malerbetrieb Becker design standards!
 
 
+

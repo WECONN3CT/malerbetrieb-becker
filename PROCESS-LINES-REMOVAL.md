@@ -147,3 +147,4 @@ The **spachtelarbeiten.html** page now has:
 The process section now looks clean, professional, and consistent with the established design system while maintaining clear visual hierarchy through the numbered step circles.
 
 
+
