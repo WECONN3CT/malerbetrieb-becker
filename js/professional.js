@@ -183,9 +183,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const prev = document.querySelector('.reviews-prev');
     const next = document.querySelector('.reviews-next');
     if (!track || !prev || !next) return;
-    const scrollAmount = 320;
-    prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
-    next.addEventListener('click', () => track.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+
+    // Show 4 cards per slide: compute width of 4 cards including gaps
+    function getSlideWidth() {
+        const card = track.querySelector('.review-card');
+        if (!card) return 0;
+        const cardStyles = getComputedStyle(card);
+        const gap = parseFloat(getComputedStyle(track).gap || '0');
+        const cardWidth = card.getBoundingClientRect().width;
+        return (cardWidth * 4) + (gap * 3);
+    }
+
+    function scrollBySlide(direction) {
+        const amount = getSlideWidth() || track.clientWidth;
+        track.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    }
+
+    prev.addEventListener('click', () => scrollBySlide(-1));
+    next.addEventListener('click', () => scrollBySlide(1));
+
+    // Keyboard accessibility
+    track.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') scrollBySlide(-1);
+        if (e.key === 'ArrowRight') scrollBySlide(1);
+    });
+
+    // Responsive: ensure top-left card aligns after resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // Snap to nearest multiple of slide width
+            const amount = getSlideWidth();
+            if (!amount) return;
+            const current = track.scrollLeft;
+            const snapped = Math.round(current / amount) * amount;
+            track.scrollTo({ left: snapped, behavior: 'auto' });
+        }, 150);
+    });
 });
 
 // Make homepage gallery items link to projects page
