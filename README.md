@@ -1,140 +1,138 @@
-# Malerbetrieb Becker Website
+# Malerbetrieb Becker Website – Handover & Pflegeanleitung
 
-Moderne, Apple-inspirierte Website für den Malerbetrieb Becker in Bonn.
+Dieses Dokument ist die vollständige Übergabe- und Pflegeanleitung für die Website des Malerbetriebs Becker in Bonn. Es richtet sich an Inhaber und Team, die Inhalte aktualisieren und die Seite betreiben möchten – ohne technisches Vorwissen.
 
-## 🚀 Features
+## Project Overview
 
-- **Modernes Apple-Design**: Minimalistisch, elegant und benutzerfreundlich
-- **Responsive Design**: Optimiert für alle Geräte (Desktop, Tablet, Mobile)
-- **Mehrere Seiten**: Startseite, Leistungen, Projekte, Kontakt
-- **Interaktive Elemente**: Projektfilter, Lightbox-Galerie, Kontaktformular
-- **SEO-optimiert**: Strukturierte Daten und Meta-Tags
+- Zweck: Moderne Firmenwebsite zur Präsentation von Leistungen, Projekten und Kontaktmöglichkeiten. Ziel ist die Gewinnung neuer Anfragen sowie die Stärkung von Vertrauen durch Referenzen und Bewertungen.
+- Zielgruppe: Privatkundschaft und Gewerbe in Bonn und Umgebung (Haus-/Wohnungsbesitzer, Hausverwaltungen, Büros, Praxen, kleine Unternehmen).
+- Geschäftsziele: Mehr qualifizierte Anfragen, seriöser Auftritt, transparente Darstellung von Leistungen, Projekten und Bewertungen.
+- Kontakt Malerbetrieb Becker:
+  - Adresse: Pappelweg 30, 53177 Bonn
+  - Telefon: 0176 40497535
+  - E-Mail: info@maler-becker-bonn.de
+  - Öffnungszeiten: Mo–Fr 8:00–18:00, Sa 9:00–14:00
 
-## 📁 Struktur
+## Technical Specifications
+
+- Technologien: Reines HTML5, CSS3 und Vanilla JavaScript (kein Framework).
+- Haupt-Stylesheet: `css/professional.css` (modernes, responsives Layout). Zusätzliche Seiten-Styles s. unten.
+- JavaScript: `js/professional.js` (Navigation, Smooth-Scroll, Animationen, Kundenbewertungen-Slider, Galerie-Klick-Verhalten).
+- Responsives Design: Optimiert für Desktop, Tablet, Smartphone (flexible Grids, responsive Bilder, Touch-optimierte Slider-Navigation).
+- Browser-Kompatibilität: Aktuelle Versionen von Chrome, Safari, Firefox, Edge inkl. mobiler Browser (iOS Safari, Chrome Mobile).
+
+## File Structure
+
+Wichtige Verzeichnisse und Dateien (Auszug):
 
 ```
 /
-├── index.html              # Startseite
-├── leistungen.html         # Leistungsübersicht
-├── projekte.html           # Projekt-Galerie
-├── kontakt.html            # Kontaktseite
-├── impressum.html          # Impressum
-├── datenschutz.html        # Datenschutzerklärung
+├── index.html                    # Startseite (Hero, Bewertungen, Leistungen, Galerie, Kontakt)
+├── projekte.html                 # Projekte-Übersicht (Projektkarten, Filter)
+├── kontakt.html                  # Kontaktseite
+├── impressum.html                # Impressum
+├── datenschutz.html              # Datenschutzerklärung
+├── leistungen/                   # Detailseiten zu Leistungen
+│   ├── wandgestaltung.html
+│   ├── fassadengestaltung.html
+│   ├── lackierarbeiten.html
+│   ├── spachtelarbeiten.html
+│   ├── bodenverlegung.html
+│   └── schimmelsanierung.html
 ├── css/
-│   ├── styles.css          # Haupt-Stylesheet
-│   ├── projects.css        # Projekte-Seite Styles
-│   ├── contact.css         # Kontakt-Seite Styles
-│   └── service.css         # Service-Seiten Styles
+│   ├── professional.css          # Haupt-Stylesheet (global)
+│   ├── projects.css              # Projekte-spezifische Anpassungen
+│   ├── projects-spacing-fix.css  # Abstands-/Layout-Korrekturen Projekte
+│   └── project-gallery.css       # Ggf. Galerie-spezifische Anpassungen
 ├── js/
-│   ├── main.js             # Haupt-JavaScript
-│   └── projects.js         # Projekte-Filter JavaScript
-├── leistungen/
-│   └── wandgestaltung.html # Beispiel-Leistungsseite
+│   └── professional.js           # Haupt-JS (Navigation, Slider, Galerie-Verhalten)
 └── images/
-    └── [Platzhalter für Bilder]
+    ├── logo.png                  # Logo
+    ├── Leistungen/               # Bilder für Leistungs-Karten (Startseite)
+    │   ├── herosection.png       # Hero-Bild auf der Startseite
+    │   ├── Wandgestaltung.png
+    │   ├── Fassadengestaltung.png
+    │   ├── Lackierarbeiten.png
+    │   ├── Spachtel- und Verputzarbeiten.png
+    │   ├── Bodenverlegearbeiten.png
+    │   └── Schimmelsanierung.png
+    └── Vorher Nacher/            # Vorher/Nachher-Projektbilder (ASCII-Dateinamen)
+        ├── fassadenbild-rosa.png
+        ├── treppe-neugestaltung.png
+        └── ... weitere Bilder
 ```
 
-## 🖼️ Benötigte Bilder
+- CSS-Hinweis: `professional.css` ist das maßgebliche Stylesheet. Die weiteren CSS-Dateien sind ergänzende, seiten- oder komponentenspezifische Anpassungen (v. a. Projekte-Seite). Bei Änderungen primär `professional.css` verwenden, projektspezifische Details in den jeweiligen CSS-Dateien.
+- Bilder: In `images/Leistungen/` liegen die Leistungs-Bilder (Startseite). In `images/Vorher Nacher/` liegen die Vorher/Nachher-Projektbilder. Bitte für Webserver-Kompatibilität nur ASCII-Zeichen in Dateinamen verwenden (keine Umlaute/Leerzeichen, stattdessen Bindestriche).
 
-Bitte fügen Sie folgende Bilder im `images/` Ordner hinzu:
+## Content Management
 
-### Allgemein
-- `logo.png` - Ihr Firmenlogo (40x40px empfohlen)
-- `hero-maler.jpg` - Hauptbild für die Startseite
+### Kontaktinformationen aktualisieren
+- Startseite `index.html`: Abschnitt „Kontaktieren Sie uns“ (Adresse, Telefon, Öffnungszeiten) bearbeiten.
+- Footer: In allen Seiten ist im Footer die Adresse und Kontaktinfo verlinkt – ggf. synchron anpassen.
+- Telefonnummer-Links (`tel:`) und E-Mail-Links (`mailto:`) prüfen und aktualisieren.
 
-### Projekte (für die Galerie)
-- `projekt-fassade-1.jpg`, `projekt-fassade-2.jpg` - Fassadenprojekte
-- `projekt-wohnung-1.jpg`, `projekt-wohnung-2.jpg` - Innenraumprojekte
-- `projekt-renovierung-1.jpg` - Renovierungsprojekt
-- `projekt-buero-1.jpg` - Büroprojekt
-- `projekt-bad-1.jpg` - Badezimmerprojekt
-- `projekt-praxis-1.jpg` - Praxisprojekt
+### Projektbilder hinzufügen/ersetzen
+- Bilder in `images/Vorher Nacher/` ablegen. Dateinamen URL-sicher (z. B. `terrassenfenster-neu-gestaltet.png`).
+- In `projekte.html` die entsprechende Projektkarte duplizieren/anpassen:
+  - Bildpfad in `<img src="...">`
+  - Titel `<h3>...</h3>`, Ort, Beschreibung
+  - Kategorie über `data-category` (z. B. `fassade`, `lackierung`, `spachtel`, `komplett`) damit Filter funktionieren.
+- Auf der Startseite `index.html` können ausgewählte Vorher/Nachher-Bilder in der Galerie-Sektion gezeigt werden (Bilder anklickbar → führen zu `projekte.html`).
 
-Alle Bilder sollten:
-- Hochauflösend sein (mindestens 1200px Breite)
-- Im JPG-Format für Fotos oder PNG für Grafiken
-- Komprimiert für Web-Performance
+### Leistungsbeschreibungen anpassen
+- Startseite `index.html` → Abschnitt „Unsere Leistungen“: Titel, Beschreibungstexte und Bilder pro Karte anpassen.
+- Detailseiten unter `leistungen/` (z. B. `leistungen/wandgestaltung.html`) enthalten ausführliche Inhalte und FAQs – Texte direkt in den Dateien ändern.
 
-## 🚀 GitHub Pages Deployment
+### Google Reviews Integration
+- HTML-Struktur: In `index.html` existiert die Sektion „Was unsere Kunden sagen“ mit `reviews-track` und mehreren `review-card` Einträgen, inkl. Navigation (`reviews-prev`, `reviews-next`).
+- Verhalten: In `js/professional.js` wird der Slider initialisiert (Scrollen um 4 Karten, Navigation per Buttons, Keyboard-Unterstützung, responsives Snap-Verhalten).
+- „Mehr Google Bewertungen ansehen“-Button verweist auf den Google-Suchergebnis-Link und öffnet in neuem Tab (`target="_blank"`).
+- Neue Bewertungen können als weitere `article.review-card` Elemente ergänzt werden (gleiche Struktur). Achten Sie auf kurze, prägnante Texte.
 
-### Schritt 1: Repository erstellen
-1. Erstellen Sie ein neues Repository auf GitHub
-2. Nennen Sie es z.B. `malerbetrieb-becker-website`
+## Page Descriptions
 
-### Schritt 2: Code hochladen
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/IHR-USERNAME/malerbetrieb-becker-website.git
-git push -u origin main
-```
+- `index.html` – Startseite mit:
+  - Hero-Bereich (Bild `images/Leistungen/herosection.png`, USP-Checkmarks, CTAs „Jetzt anrufen“ und „Angebot anfordern“)
+  - Kundenbewertungen (Slider)
+  - Unsere Leistungen (6 Karten)
+  - Vorher & Nachher (kleine Galerie – Karten verlinken auf `projekte.html`)
+  - Kontakt (Adresse, Telefon, Öffnungszeiten, Formular)
+- `projekte.html` – Projekte-Übersicht als Kartenraster mit Filtern (Kategorien über `data-category`). Einheitliche Kartengrößen, Bilddarstellung optimiert.
+- `leistungen/*.html` – Detailseiten zu einzelnen Leistungen (Inhalte und FAQs pflegbar).
+- `kontakt.html` – Kontaktinfos und ggf. Formular (falls separat genutzt).
+- `impressum.html`, `datenschutz.html` – Rechtliche Seiten (Logo-Pfad auf `images/logo.png`).
 
-### Schritt 3: GitHub Pages aktivieren
-1. Gehen Sie zu Settings → Pages
-2. Source: Deploy from a branch
-3. Branch: main
-4. Folder: / (root)
-5. Klicken Sie auf Save
+### Navigation
+- Auf der Startseite führen die Navigationslinks zu Sektionen (`#home`, `#services`/`#leistungen`, `#gallery`, `#contact`).
+- Auf Unterseiten verlinkt „Leistungen“ zurück zur Startseite + Sektion (z. B. `index.html#leistungen`).
 
-### Schritt 4: Custom Domain (optional)
-1. Erstellen Sie eine Datei namens `CNAME` im Root-Verzeichnis
-2. Fügen Sie Ihre Domain ein: `www.maler-becker-bonn.de`
-3. Konfigurieren Sie DNS bei Ihrem Domain-Provider:
-   - A-Records auf GitHub Pages IPs
-   - CNAME-Record für www auf `IHR-USERNAME.github.io`
+## Maintenance Instructions
 
-## 📝 Anpassungen
+### Backup
+- Einfachste Variante: Gesamten Projektordner kopieren (lokal oder ZIP), oder das Git-Repository clonen/archivieren.
+- In GitHub: „Download ZIP“ oder ein Release anlegen.
 
-### Farben ändern
-Bearbeiten Sie die CSS-Variablen in `css/styles.css`:
-```css
-:root {
-    --primary: #007AFF;
-    --secondary: #5AC8FA;
-    /* weitere Farben... */
-}
-```
+### Hosting (Empfehlung)
+- Statisches Hosting reicht aus (keine Server-Skripte notwendig). Optionen:
+  - GitHub Pages (bereits eingerichtet, `.nojekyll` vorhanden; Deploy per Workflow).
+  - Alternativ: Netlify, Vercel, klassisches Webhosting (Apache/Nginx) – einfach die Dateien hochladen.
 
-### Kontaktdaten aktualisieren
-Suchen Sie in allen HTML-Dateien nach:
-- Telefonnummer: `0176 40497535`
-- E-Mail: `info@maler-becker-bonn.de`
-- Adresse: `Pappelweg 30, 53177 Bonn`
+### Updates in Zukunft
+- Bilder austauschen/ergänzen: s. Content Management oben (ASCII-Dateinamen!).
+- Texte anpassen: Direkt in den HTML-Dateien; auf konsistente Formate (Umlaute, Sonderzeichen) achten.
+- Styles: Kleinere Anpassungen in `css/professional.css`. Projekte-spezifische Layoutdetails in `css/projects.css` bzw. ergänzenden CSS-Dateien.
+- JavaScript: `js/professional.js` – für Slider/Interaktionen. Änderungen behutsam und getestet ausrollen.
 
-### Neue Leistungsseiten hinzufügen
-1. Kopieren Sie `leistungen/wandgestaltung.html`
-2. Benennen Sie die Datei um (z.B. `fassadengestaltung.html`)
-3. Passen Sie Inhalt und Meta-Tags an
-4. Verlinken Sie die neue Seite in der Navigation
+## Business Information (Stand: aktuell)
 
-## 🔧 Technische Details
-
-- **HTML5** & **CSS3** mit modernen Features
-- **JavaScript** für Interaktivität (Vanilla JS, keine Frameworks)
-- **Apple Design System** inspiriertes UI
-- **Responsive** mit Mobile-First Ansatz
-- **SEO** optimiert mit strukturierten Daten
-
-## 📱 Browser-Kompatibilität
-
-- Chrome (neueste Version)
-- Safari (neueste Version)
-- Firefox (neueste Version)
-- Edge (neueste Version)
-- Mobile Browser (iOS Safari, Chrome Mobile)
-
-## 📧 Support
-
-Bei Fragen oder Problemen kontaktieren Sie:
-- **E-Mail**: info@maler-becker-bonn.de
-- **Telefon**: 0176 40497535
-
-## 📄 Lizenz
-
-© 2024 Malerbetrieb Becker. Alle Rechte vorbehalten.
+- Malerbetrieb Becker – Maler- und Lackierermeister Steven Becker
+- Adresse: Pappelweg 30, 53177 Bonn
+- Telefon: 0176 40497535
+- E-Mail: info@maler-becker-bonn.de
+- Einsatzgebiet: Bonn und Umgebung
+- Öffnungszeiten: Mo–Fr 8:00–18:00, Sa 9:00–14:00
 
 ---
 
-**Hinweis**: Diese Website wurde für den Malerbetrieb Becker entwickelt und ist für den produktiven Einsatz vorbereitet. Bitte fügen Sie Ihre eigenen Bilder hinzu und passen Sie die Inhalte nach Bedarf an.
+Bei Fragen oder Änderungswünschen gerne melden. Die Website ist bewusst ohne Frameworks aufgebaut, damit sie langfristig leicht wartbar und unabhängig von speziellen Build-Prozessen bleibt.
