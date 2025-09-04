@@ -318,8 +318,19 @@ function syncHeroOfferStripWidth() {
     const strip = document.getElementById('hero-offer-strip');
     if (!strip) return;
     const cta = document.querySelector('.hero-actions .btn.btn-secondary');
-    if (!cta) return;
-    const ctaWidth = cta.getBoundingClientRect().width;
+    const heroContent = document.querySelector('.hero-content');
+    if (!cta || !heroContent) return;
+
+    const ctaRect = cta.getBoundingClientRect();
+    const containerRect = heroContent.getBoundingClientRect();
+
+    // Match width to CTA button
+    const ctaWidth = ctaRect.width;
     strip.style.width = ctaWidth + 'px';
+
+    // Align left edge with CTA so centers line up
+    const leftOffset = ctaRect.left - containerRect.left;
+    strip.style.marginLeft = leftOffset + 'px';
+    strip.style.marginRight = 'auto';
 }
 
