@@ -910,23 +910,10 @@ a {
     padding-top: var(--spacing-xl);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-md);
+    text-align: center;
 }
 
-/* Footer credit logo */
-.footer-credit {
-    height: 18px;
-    width: auto;
-    opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-    .footer-bottom { flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
-    .footer-credit { height: 16px; }
-}
+/* Footer credit logo (removed) */
 
 /* ===== LEGAL PAGES ===== */
 .page-header {
