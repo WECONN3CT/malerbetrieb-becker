@@ -17,7 +17,7 @@ Dieses Dokument ist die vollständige Übergabe- und Pflegeanleitung für die We
 
 - Technologien: Reines HTML5, CSS3 und Vanilla JavaScript (kein Framework).
 - Haupt-Stylesheet: `css/professional.css` (modernes, responsives Layout). Zusätzliche Seiten-Styles s. unten.
-- JavaScript: `js/professional.js` (Navigation, Smooth-Scroll, Animationen, Kundenbewertungen-Slider, Galerie-Klick-Verhalten).
+- JavaScript: `js/professional.js` (Navigation, Smooth-Scroll, Animationen, Kundenbewertungen-Slider, Galerie-Klick-Verhalten). `js/projects.js` für Projekte-Seite (Filter/Lightbox).
 - Responsives Design: Optimiert für Desktop, Tablet, Smartphone (flexible Grids, responsive Bilder, Touch-optimierte Slider-Navigation).
 - Browser-Kompatibilität: Aktuelle Versionen von Chrome, Safari, Firefox, Edge inkl. mobiler Browser (iOS Safari, Chrome Mobile).
 
@@ -46,10 +46,13 @@ Wichtige Verzeichnisse und Dateien (Auszug):
 │   └── project-gallery.css       # Ggf. Galerie-spezifische Anpassungen
 ├── js/
 │   └── professional.js           # Haupt-JS (Navigation, Slider, Galerie-Verhalten)
+├── pictures/
+│   └── leistungen/
+│       ├── hero_bild.png        # Aktuelles Hero-Bild auf der Startseite
+│       └── heropicture.png      # Alternative/Backup
 └── images/
     ├── logo.png                  # Logo
     ├── Leistungen/               # Bilder für Leistungs-Karten (Startseite)
-    │   ├── herosection.png       # Hero-Bild auf der Startseite
     │   ├── Wandgestaltung.png
     │   ├── Fassadengestaltung.png
     │   ├── Lackierarbeiten.png
@@ -71,6 +74,7 @@ Wichtige Verzeichnisse und Dateien (Auszug):
 - Startseite `index.html`: Abschnitt „Kontaktieren Sie uns“ (Adresse, Telefon, Öffnungszeiten) bearbeiten.
 - Footer: In allen Seiten ist im Footer die Adresse und Kontaktinfo verlinkt – ggf. synchron anpassen.
 - Telefonnummer-Links (`tel:`) und E-Mail-Links (`mailto:`) prüfen und aktualisieren.
+- Footer-Credit: „Powered by WECONN3CT“ ist ein Link und öffnet in neuem Tab (`<a href="https://www.weconn3ct.app/" target="_blank">`).
 
 ### Projektbilder hinzufügen/ersetzen
 - Bilder in `images/Vorher Nacher/` ablegen. Dateinamen URL-sicher (z. B. `terrassenfenster-neu-gestaltet.png`).
@@ -83,6 +87,7 @@ Wichtige Verzeichnisse und Dateien (Auszug):
 ### Leistungsbeschreibungen anpassen
 - Startseite `index.html` → Abschnitt „Unsere Leistungen“: Titel, Beschreibungstexte und Bilder pro Karte anpassen.
 - Detailseiten unter `leistungen/` (z. B. `leistungen/wandgestaltung.html`) enthalten ausführliche Inhalte und FAQs – Texte direkt in den Dateien ändern.
+- Auf Leistungsseiten verlinken Buttons zur Kontaktseite mit relativem Pfad `../kontakt.html`.
 
 ### Google Reviews Integration
 - HTML-Struktur: In `index.html` existiert die Sektion „Was unsere Kunden sagen“ mit `reviews-track` und mehreren `review-card` Einträgen, inkl. Navigation (`reviews-prev`, `reviews-next`).
@@ -93,7 +98,7 @@ Wichtige Verzeichnisse und Dateien (Auszug):
 ## Page Descriptions
 
 - `index.html` – Startseite mit:
-  - Hero-Bereich (Bild `images/Leistungen/herosection.png`, USP-Checkmarks, CTAs „Jetzt anrufen“ und „Angebot anfordern“)
+  - Hero-Bereich (Bild `pictures/leistungen/hero_bild.png`, USP-Checkmarks, CTAs „Jetzt anrufen“ und „Kostenlose Erstberatung“)
   - Kundenbewertungen (Slider)
   - Unsere Leistungen (6 Karten)
   - Vorher & Nachher (kleine Galerie – Karten verlinken auf `projekte.html`)
@@ -106,6 +111,7 @@ Wichtige Verzeichnisse und Dateien (Auszug):
 ### Navigation
 - Auf der Startseite führen die Navigationslinks zu Sektionen (`#home`, `#services`/`#leistungen`, `#gallery`, `#contact`).
 - Auf Unterseiten verlinkt „Leistungen“ zurück zur Startseite + Sektion (z. B. `index.html#leistungen`).
+- Buttons in `leistungen/*.html` verlinken auf `../kontakt.html`. Auf der Startseite verlinken CTAs auf `#contact` bzw. `kontakt.html`.
 
 ## Maintenance Instructions
 
@@ -122,6 +128,7 @@ Wichtige Verzeichnisse und Dateien (Auszug):
 - Bilder austauschen/ergänzen: s. Content Management oben (ASCII-Dateinamen!).
 - Texte anpassen: Direkt in den HTML-Dateien; auf konsistente Formate (Umlaute, Sonderzeichen) achten.
 - Styles: Kleinere Anpassungen in `css/professional.css`. Projekte-spezifische Layoutdetails in `css/projects.css` bzw. ergänzenden CSS-Dateien.
+- Footer-Credit-Styling: Klasse `footer-credit-text` ist im `css/professional.css` definiert (kleine, dezente Schrift rechts unten). Der Text ist verlinkt und öffnet in neuem Tab.
 - JavaScript: `js/professional.js` – für Slider/Interaktionen. Änderungen behutsam und getestet ausrollen.
 
 ## Business Information (Stand: aktuell)
