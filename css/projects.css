@@ -1,6 +1,5 @@
-/* Projects Page Styles - Enhanced Spacing */
 
-/* Filter Section */
+
 .filter-section {
     padding: var(--spacing-2xl) 0;
     background: var(--white);
@@ -10,9 +9,9 @@
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Increased from var(--spacing-md) to 20px */
+    gap: 20px; 
     justify-content: center;
-    margin-bottom: 40px; /* Added proper margin-bottom */
+    margin-bottom: 40px; 
 }
 
 .filter-btn {
@@ -61,7 +60,6 @@
     height: 200%;
 }
 
-/* Projects Section */
 .projects-section {
     padding: var(--spacing-3xl) 0;
     background: var(--gray-50);
@@ -70,13 +68,12 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px; /* Increased from var(--spacing-xl) to 40px */
-    row-gap: 40px; /* Explicit row gap for better vertical spacing */
-    margin-top: 0; /* Remove extra margin since filter has margin-bottom */
-    align-items: stretch; /* ensure cards stretch to equal height per row */
+    gap: 40px; 
+    row-gap: 40px; 
+    margin-top: 0; 
+    align-items: stretch; 
 }
 
-/* Project Card */
 .project-card {
     background: var(--white);
     border-radius: var(--radius-xl);
@@ -86,8 +83,8 @@
     animation: fadeIn 0.5s ease;
     border: 1px solid rgba(0, 122, 255, 0.08);
     position: relative;
-    display: flex;            /* equalize card heights */
-    flex-direction: column;   /* stack image and content */
+    display: flex;            
+    flex-direction: column;   
     height: 100%;
 }
 
@@ -119,10 +116,9 @@
     display: none;
 }
 
-/* Project Image */
 .project-image {
     position: relative;
-    height: 320px;            /* unified image height across all cards */
+    height: 320px;            
     overflow: hidden;
     background: var(--gray-200);
 }
@@ -138,13 +134,12 @@
     transform: scale(1.1);
 }
 
-/* Uniform content area for all cards */
 .project-info {
     padding: var(--spacing-xl);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    min-height: 200px; /* ensures consistent card height */
+    min-height: 200px; 
 }
 
 .project-info h3 {
@@ -164,14 +159,13 @@
 .project-info .project-description {
     color: var(--gray-700);
     line-height: 1.6;
-    /* clamp to avoid variable heights from long text */
+    
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* Before/After full-view: show entire image without cropping */
 .project-card:has(.project-badge) .project-image {
     background: var(--gray-100);
 }
@@ -184,7 +178,6 @@
     transform: none;
 }
 
-/* Fallback selector by image path for browsers without :has support */
 .project-image img[src*="Vorher Nacher"],
 .project-image img[src*="bilder-vorher-nacher"] {
     object-fit: contain;
@@ -195,7 +188,6 @@
     transform: none;
 }
 
-/* Normalize special large gallery card to standard dimensions */
 .project-card-large .gallery-thumbs { display: none; }
 .project-card-large .gallery-main .project-image { height: 320px; }
 .project-card-large .project-stats { display: none; }
@@ -227,7 +219,6 @@
     font-weight: 500;
 }
 
-/* Project Content */
 .project-content {
     padding: var(--spacing-xl);
 }
@@ -263,7 +254,6 @@
     margin-bottom: var(--spacing-lg);
 }
 
-/* Project Tags */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -280,7 +270,6 @@
     font-weight: 500;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -292,11 +281,10 @@
     }
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px; /* Slightly reduced for medium screens */
+        gap: 30px; 
         row-gap: 35px;
     }
 }
@@ -304,7 +292,7 @@
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 25px; /* Reduced for mobile but still generous */
+        gap: 25px; 
         row-gap: 30px;
     }
     
@@ -313,13 +301,13 @@
         overflow-x: auto;
         padding: 0 var(--spacing-md);
         -webkit-overflow-scrolling: touch;
-        gap: 15px; /* Maintained good spacing on mobile */
-        margin-bottom: 30px; /* Reduced for mobile */
+        gap: 15px; 
+        margin-bottom: 30px; 
     }
     
     .filter-btn {
         white-space: nowrap;
-        flex-shrink: 0; /* Prevent buttons from shrinking */
+        flex-shrink: 0; 
     }
 }
 

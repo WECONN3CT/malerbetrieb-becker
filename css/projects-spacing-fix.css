@@ -1,22 +1,16 @@
-/* ========================================
-   Projects Page Spacing Enhancements
-   Professional Layout with Proper Breathing Room
-   ======================================== */
 
-/* Override and enhance existing project styles */
 
-/* Filter Section Improvements */
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px !important; /* Increased gap between buttons */
+    gap: 20px !important; 
     justify-content: center;
-    margin-bottom: 40px !important; /* Proper separation from grid */
-    padding: 0 20px; /* Add horizontal padding */
+    margin-bottom: 40px !important; 
+    padding: 0 20px; 
 }
 
 .filter-btn {
-    padding: 12px 24px; /* More generous button padding */
+    padding: 12px 24px; 
     background: white;
     color: #5a6c7d;
     border: 2px solid #e9ecef;
@@ -26,9 +20,9 @@
     transition: all 0.3s ease;
     text-decoration: none;
     font-size: 14px;
-    min-width: 120px; /* Ensure consistent button sizes */
+    min-width: 120px; 
     text-align: center;
-    flex-shrink: 0; /* Prevent shrinking on mobile */
+    flex-shrink: 0; 
 }
 
 .filter-btn:hover,
@@ -40,17 +34,15 @@
     box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
 }
 
-/* Projects Grid Enhanced Spacing */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
-    gap: 40px !important; /* Generous horizontal spacing */
-    row-gap: 40px !important; /* Generous vertical spacing */
-    margin-top: 0 !important; /* Remove since filter has margin-bottom */
-    padding: 0 20px; /* Add container padding */
+    gap: 40px !important; 
+    row-gap: 40px !important; 
+    margin-top: 0 !important; 
+    padding: 0 20px; 
 }
 
-/* Project Card Enhancements */
 .project-card {
     background: white;
     border-radius: 16px;
@@ -59,7 +51,7 @@
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-bottom: 0; /* Remove any existing margin */
+    margin-bottom: 0; 
 }
 
 .project-card:hover {
@@ -68,9 +60,8 @@
     border-color: rgba(255, 140, 0, 0.2);
 }
 
-/* Project Info Spacing */
 .project-info {
-    padding: 24px; /* Generous internal padding */
+    padding: 24px; 
 }
 
 .project-info h3 {
@@ -96,17 +87,15 @@
     font-size: 15px;
 }
 
-/* Large Project Card Spacing */
 .project-card-large {
-    grid-column: auto; /* align with standard cards */
-    min-height: auto;  /* remove forced height */
+    grid-column: auto; 
+    min-height: auto;  
 }
 
 .project-card-large .project-info {
-    padding: 24px; /* match standard card padding */
+    padding: 24px; 
 }
 
-/* Project Stats Spacing */
 .project-stats {
     display: flex;
     gap: 12px;
@@ -126,25 +115,21 @@
     border: 1px solid rgba(255, 140, 0, 0.2);
 }
 
-/* Responsive Breakpoints with Proper Spacing */
-
-/* Large Desktop (1200px+) */
 @media (min-width: 1200px) {
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr) !important; /* Force 3 columns on large screens */
-        gap: 50px !important; /* Extra generous spacing on large screens */
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 50px !important; 
         row-gap: 50px !important;
         max-width: 1400px;
         margin: 0 auto;
     }
     
     .filter-buttons {
-        gap: 25px !important; /* Extra space between buttons */
+        gap: 25px !important; 
         margin-bottom: 50px !important;
     }
 }
 
-/* Medium Desktop (992px - 1199px) */
 @media (max-width: 1199px) and (min-width: 992px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
@@ -158,7 +143,6 @@
     }
 }
 
-/* Tablet (768px - 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
@@ -174,11 +158,10 @@
     }
     
     .project-card-large {
-        grid-column: auto; /* match standard behavior */
+        grid-column: auto; 
     }
 }
 
-/* Mobile Large (576px - 767px) */
 @media (max-width: 767px) and (min-width: 576px) {
     .projects-grid {
         grid-template-columns: 1fr !important;
@@ -194,12 +177,12 @@
         margin-bottom: 25px !important;
         padding: 0 15px;
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE/Edge */
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
     }
     
     .filter-buttons::-webkit-scrollbar {
-        display: none; /* Chrome/Safari */
+        display: none; 
     }
     
     .filter-btn {
@@ -217,7 +200,6 @@
     }
 }
 
-/* Mobile Small (up to 575px) */
 @media (max-width: 575px) {
     .projects-grid {
         grid-template-columns: 1fr !important;
@@ -259,17 +241,15 @@
     }
 }
 
-/* Section Padding Improvements */
 .projects-section {
-    padding: 60px 0 80px 0 !important; /* More generous section padding */
+    padding: 60px 0 80px 0 !important; 
     background: #f8f9fa;
 }
 
 .page-hero {
-    padding-bottom: 40px !important; /* Better separation from projects */
+    padding-bottom: 40px !important; 
 }
 
-/* Ensure proper container spacing */
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -288,13 +268,11 @@
     }
 }
 
-/* Animation Improvements */
 .project-card {
     animation: fadeInUp 0.6s ease-out;
     animation-fill-mode: both;
 }
 
-/* Staggered animation delays */
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
@@ -316,7 +294,6 @@
     }
 }
 
-/* Print Styles */
 @media print {
     .filter-buttons {
         display: none;

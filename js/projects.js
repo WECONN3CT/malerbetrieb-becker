@@ -1,18 +1,15 @@
-// Projects Filter Functionality
+
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
-    
-    // Filter functionality
+
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             const filterValue = this.getAttribute('data-filter');
-            
-            // Update active button
+
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            
-            // Filter projects
+
             projectCards.forEach(card => {
                 if (filterValue === 'all') {
                     card.classList.remove('hidden');
@@ -29,8 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-    
-    // Lightbox functionality for project images
+
     projectCards.forEach(card => {
         card.addEventListener('click', function() {
             const image = this.querySelector('.project-image img');
@@ -42,13 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function createLightbox(imageSrc, title, description) {
-        // Remove existing lightbox if any
+
         const existingLightbox = document.querySelector('.lightbox');
         if (existingLightbox) {
             existingLightbox.remove();
         }
-        
-        // Create lightbox elements
+
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
         
@@ -66,15 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const caption = document.createElement('div');
         caption.className = 'lightbox-caption';
         caption.innerHTML = `<h3>${title}</h3><p>${description}</p>`;
-        
-        // Append elements
+
         lightboxContent.appendChild(closeBtn);
         lightboxContent.appendChild(img);
         lightboxContent.appendChild(caption);
         lightbox.appendChild(lightboxContent);
         document.body.appendChild(lightbox);
-        
-        // Add styles
+
         const lightboxStyles = `
             .lightbox {
                 position: fixed;
@@ -172,24 +165,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         `;
-        
-        // Add styles if not already added
+
         if (!document.querySelector('#lightbox-styles')) {
             const styleElement = document.createElement('style');
             styleElement.id = 'lightbox-styles';
             styleElement.textContent = lightboxStyles;
             document.head.appendChild(styleElement);
         }
-        
-        // Close lightbox functionality
+
         closeBtn.addEventListener('click', function() {
             lightbox.style.animation = 'fadeOut 0.3s ease';
             setTimeout(() => {
                 lightbox.remove();
             }, 300);
         });
-        
-        // Close on outside click
+
         lightbox.addEventListener('click', function(e) {
             if (e.target === lightbox) {
                 lightbox.style.animation = 'fadeOut 0.3s ease';
@@ -198,8 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 300);
             }
         });
-        
-        // Close on escape key
+
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 const lightbox = document.querySelector('.lightbox');
@@ -212,8 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Add fadeOut animation
+
     const fadeOutStyle = document.createElement('style');
     fadeOutStyle.textContent = `
         @keyframes fadeOut {

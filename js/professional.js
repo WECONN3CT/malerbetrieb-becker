@@ -1,8 +1,7 @@
-// Malerbetrieb Becker - Professional JavaScript
-// Version 2.0
+
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize components
+
     initNavigation();
     initMobileMenu();
     initSmoothScroll();
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initGalleryLinks();
 });
 
-// Navigation scroll effect
 function initNavigation() {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
@@ -38,7 +36,6 @@ function initNavigation() {
     window.addEventListener('scroll', requestTick);
 }
 
-// Mobile menu
 function initMobileMenu() {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
@@ -48,8 +45,7 @@ function initMobileMenu() {
     navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
-        
-        // Animate hamburger menu
+
         const spans = navToggle.querySelectorAll('span');
         if (navMenu.classList.contains('active')) {
             spans[0].style.transform = 'rotate(45deg) translateY(8px)';
@@ -61,8 +57,7 @@ function initMobileMenu() {
             spans[2].style.transform = '';
         }
     });
-    
-    // Close menu when clicking links
+
     const navLinks = navMenu.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -75,8 +70,7 @@ function initMobileMenu() {
             spans[2].style.transform = '';
         });
     });
-    
-    // Close menu when clicking outside
+
     document.addEventListener('click', function(e) {
         if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
             navMenu.classList.remove('active');
@@ -90,7 +84,6 @@ function initMobileMenu() {
     });
 }
 
-// Smooth scroll
 function initSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -115,8 +108,7 @@ function initSmoothScroll() {
                 top: targetPosition,
                 behavior: 'smooth'
             });
-            
-            // Update active nav link
+
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(navLink => navLink.classList.remove('active'));
             
@@ -128,7 +120,6 @@ function initSmoothScroll() {
     });
 }
 
-// Animations on scroll
 function initAnimations() {
     const observerOptions = {
         root: null,
@@ -139,7 +130,7 @@ function initAnimations() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add animation classes
+
                 if (entry.target.classList.contains('service-card')) {
                     entry.target.style.opacity = '0';
                     entry.target.style.transform = 'translateY(30px)';
@@ -170,21 +161,18 @@ function initAnimations() {
             }
         });
     }, observerOptions);
-    
-    // Observe elements
+
     document.querySelectorAll('.service-card').forEach(el => observer.observe(el));
     document.querySelectorAll('.gallery-item').forEach(el => observer.observe(el));
     document.querySelectorAll('.stat-value').forEach(el => observer.observe(el));
 }
 
-// Simple horizontal scroll for reviews
 document.addEventListener('DOMContentLoaded', function() {
     const track = document.getElementById('reviewsTrack');
     const prev = document.querySelector('.reviews-prev');
     const next = document.querySelector('.reviews-next');
     if (!track || !prev || !next) return;
 
-    // Show 4 cards per slide: compute width of 4 cards including gaps
     function getSlideWidth() {
         const card = track.querySelector('.review-card');
         if (!card) return 0;
@@ -202,18 +190,16 @@ document.addEventListener('DOMContentLoaded', function() {
     prev.addEventListener('click', () => scrollBySlide(-1));
     next.addEventListener('click', () => scrollBySlide(1));
 
-    // Keyboard accessibility
     track.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') scrollBySlide(-1);
         if (e.key === 'ArrowRight') scrollBySlide(1);
     });
 
-    // Responsive: ensure top-left card aligns after resize
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(() => {
-            // Snap to nearest multiple of slide width
+
             const amount = getSlideWidth();
             if (!amount) return;
             const current = track.scrollLeft;
@@ -223,7 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Make homepage gallery items link to projects page
 function initGalleryLinks() {
     const items = document.querySelectorAll('.gallery-item');
     if (!items.length) return;
@@ -235,7 +220,6 @@ function initGalleryLinks() {
     });
 }
 
-// Counter animation
 function animateCounter(element) {
     const target = parseInt(element.innerText);
     const duration = 2000;
@@ -255,30 +239,23 @@ function animateCounter(element) {
     updateCounter();
 }
 
-// Contact form
 function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form data
+
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
-        
-        // Here you would normally send the data to a server
-        console.log('Form submitted:', data);
-        
-        // Show success message
+
         const button = form.querySelector('button[type="submit"]');
         const originalText = button.innerText;
         
         button.innerText = 'Nachricht gesendet!';
         button.style.background = '#27ae60';
         button.disabled = true;
-        
-        // Reset form
+
         setTimeout(() => {
             form.reset();
             button.innerText = originalText;
@@ -288,7 +265,6 @@ function initContactForm() {
     });
 }
 
-// Update active navigation on scroll
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -311,6 +287,4 @@ window.addEventListener('scroll', function() {
         }
     });
 });
-
-// removed offer strip sizing (strip deleted from DOM)
 
