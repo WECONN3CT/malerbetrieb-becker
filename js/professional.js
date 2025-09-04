@@ -230,7 +230,7 @@ function initGalleryLinks() {
     items.forEach(item => {
         item.style.cursor = 'pointer';
         item.addEventListener('click', function() {
-            window.location.href = 'projekte/';
+            window.location.href = 'projekte.html';
         });
     });
 }
