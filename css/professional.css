@@ -334,15 +334,13 @@ a {
 .hero-image-main img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center 60%;
-    transform: scale(1.06);
-    transition: transform 0.8s ease;
+    object-fit: contain;
+    object-position: center center;
+    transform: none;
+    transition: none;
 }
 
-.hero-image-main:hover img {
-    transform: scale(1.1);
-}
+.hero-image-main:hover img { transform: none; }
 
 .hero-stat-card {
     position: absolute;
@@ -458,7 +456,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    .hero-image-main img { object-position: center 50%; }
+    .hero-image-main img { object-position: center center; }
     .reviews-header { flex-direction: column; align-items: flex-start; gap: var(--spacing-sm); }
     .reviews-actions { width: 100%; justify-content: space-between; }
     .reviews-track { grid-auto-columns: 85%; }
