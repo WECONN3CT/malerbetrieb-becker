@@ -963,6 +963,14 @@ a {
     border-top: 1px solid var(--bg-gray);
 }
 
+.legal-content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
 .legal-content p,
 .legal-content li {
     color: var(--text-secondary);
@@ -976,6 +984,15 @@ a {
 }
 
 .legal-content a { color: var(--primary); }
+
+.legal-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.legal-section + .legal-section {
+    padding-top: var(--spacing-2xl);
+    border-top: 1px solid var(--bg-gray);
+}
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
