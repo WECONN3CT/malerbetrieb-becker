@@ -1,0 +1,243 @@
+/* Bug Fixes and Additional Styles */
+
+/* Fix for mobile navigation z-index */
+.navbar {
+    z-index: 1001;
+}
+
+.nav-menu {
+    z-index: 1000;
+}
+
+/* Fix for review slider positioning */
+.reviews-slider {
+    position: relative;
+    height: auto;
+    min-height: 300px;
+}
+
+.review-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(50px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    position: relative;
+}
+
+/* Fix for hero stats on mobile */
+@media (max-width: 480px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .stat-item {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .stat-number {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .stat-label {
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* Fix for expertise items layout */
+.expertise-item {
+    align-items: flex-start;
+}
+
+.expertise-item > div:last-child {
+    flex: 1;
+}
+
+/* Fix for floating elements performance */
+.floating-element {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Fix for button hover states on touch devices */
+@media (hover: none) {
+    .btn:hover {
+        transform: none;
+    }
+    
+    .service-card:hover {
+        transform: none;
+    }
+    
+    .review-card:hover {
+        transform: none;
+    }
+}
+
+/* Fix for trust badges wrapping */
+.trust-badges {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .trust-badges {
+        justify-content: center;
+    }
+}
+
+/* Fix for CTA section spacing */
+.cta-content {
+    padding: 0 var(--spacing-md);
+}
+
+/* Fix for Google logo in reviews */
+.google-logo {
+    flex-shrink: 0;
+}
+
+/* Fix for slider dots alignment */
+.slider-dots {
+    align-items: center;
+}
+
+/* Fix for form validation styles */
+.form-input.error,
+.form-textarea.error {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
+}
+
+/* Fix for navbar transition */
+.navbar {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                background 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+/* Fix for hero content centering */
+.hero .container {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+}
+
+/* Fix for service icons alignment */
+.service-icon {
+    align-self: flex-start;
+}
+
+/* Fix for review card height consistency */
+.reviews-slider {
+    display: flex;
+    align-items: stretch;
+}
+
+.review-card {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Fix for mobile hero padding */
+@media (max-width: 768px) {
+    .hero .container {
+        min-height: calc(100vh - 80px);
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-xl);
+    }
+}
+
+/* Fix for animation performance */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.service-card,
+.review-card,
+.btn {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Fix for scroll behavior */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Fix for hero title line height */
+.hero-title {
+    line-height: 1.1;
+}
+
+.title-highlight,
+.title-main {
+    line-height: inherit;
+}
+
+/* Fix for badge icons */
+.badge-icon,
+.trust-icon {
+    flex-shrink: 0;
+}
+
+/* Fix for expertise grid on tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Fix for review text overflow */
+.review-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Fix for CTA button spacing */
+.cta-buttons {
+    margin-top: var(--spacing-xl);
+}
+
+/* Accessibility fixes */
+.btn:focus,
+.nav-link:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Fix for reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating-element {
+        animation: none;
+    }
+}

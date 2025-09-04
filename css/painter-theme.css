@@ -1,0 +1,347 @@
+/* Malerbetrieb-spezifische Design-Elemente */
+
+/* Pinselstrich-Effekte */
+.brush-stroke {
+    position: relative;
+    overflow: hidden;
+}
+
+.brush-stroke::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 140, 0, 0.1) 25%, 
+        rgba(255, 165, 0, 0.2) 50%, 
+        rgba(255, 140, 0, 0.1) 75%, 
+        transparent 100%
+    );
+    animation: brushStroke 3s ease-in-out infinite;
+}
+
+@keyframes brushStroke {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* Farbtropfen-Effekte */
+.paint-drops {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.paint-drop {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #ff8c00 0%, #ffa500 100%);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: paintDrop 4s ease-in-out infinite;
+}
+
+.paint-drop:nth-child(1) { left: 10%; animation-delay: 0s; }
+.paint-drop:nth-child(2) { left: 30%; animation-delay: 1s; }
+.paint-drop:nth-child(3) { left: 50%; animation-delay: 2s; }
+.paint-drop:nth-child(4) { left: 70%; animation-delay: 3s; }
+.paint-drop:nth-child(5) { left: 90%; animation-delay: 0.5s; }
+
+@keyframes paintDrop {
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px) rotate(45deg) scale(0); 
+    }
+    20% { 
+        opacity: 1; 
+        transform: translateY(0) rotate(45deg) scale(1); 
+    }
+    80% { 
+        opacity: 1; 
+        transform: translateY(100vh) rotate(45deg) scale(1); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(100vh) rotate(45deg) scale(0); 
+    }
+}
+
+/* Farbpaletten-Effekt */
+.color-palette {
+    position: relative;
+    display: inline-block;
+}
+
+.color-palette::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        #ff8c00 0%, 
+        #ffa500 25%, 
+        #ffd700 50%, 
+        #ffb347 75%, 
+        #ff8c00 100%
+    );
+    border-radius: 2px;
+    animation: colorFlow 3s ease-in-out infinite;
+}
+
+@keyframes colorFlow {
+    0%, 100% { transform: scaleX(0.8); opacity: 0.6; }
+    50% { transform: scaleX(1.1); opacity: 1; }
+}
+
+/* Handwerk-Textur */
+.texture-overlay {
+    position: relative;
+}
+
+.texture-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 140, 0, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(255, 165, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px, 30px 30px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Malerpinsel-Cursor für interaktive Elemente */
+.paintbrush-cursor {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 21L12 12L21 3L18 0L9 9L0 18L3 21Z" fill="%23ff8c00"/></svg>'), auto;
+}
+
+/* Farbspritzer-Animationen */
+.paint-splash {
+    position: relative;
+    overflow: hidden;
+}
+
+.paint-splash::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, 
+        rgba(255, 140, 0, 0.3) 0%, 
+        rgba(255, 165, 0, 0.2) 30%, 
+        transparent 70%
+    );
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.paint-splash:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+/* Professionelle Werkzeug-Icons */
+.tool-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.1) 0%, rgba(255, 165, 0, 0.1) 100%);
+    border: 2px solid rgba(255, 140, 0, 0.3);
+    border-radius: 12px;
+    color: #ff8c00;
+    transition: all 0.3s ease;
+}
+
+.tool-icon:hover {
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
+    border-color: rgba(255, 140, 0, 0.5);
+    transform: translateY(-3px) rotate(5deg);
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2);
+}
+
+/* Handwerker-Badge */
+.craftsman-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, 
+        rgba(255, 140, 0, 0.1) 0%, 
+        rgba(255, 165, 0, 0.05) 100%
+    );
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 50px;
+    color: #ffa500;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.craftsman-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 140, 0, 0.1) 50%, 
+        transparent 100%
+    );
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Qualitäts-Siegel */
+.quality-seal {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: conic-gradient(from 0deg, #ff8c00, #ffa500, #ffd700, #ff8c00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 20s linear infinite;
+}
+
+.quality-seal::before {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #1a1a1a;
+    border-radius: 50%;
+}
+
+.quality-seal .seal-content {
+    position: relative;
+    z-index: 2;
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* Farbverlauf-Buttons */
+.painter-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ffd700 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+}
+
+.painter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        transparent 100%
+    );
+    transition: left 0.5s ease;
+}
+
+.painter-btn:hover::before {
+    left: 100%;
+}
+
+.painter-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(255, 140, 0, 0.4);
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .paint-drops {
+        display: none;
+    }
+    
+    .quality-seal {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .tool-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .craftsman-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Logo Styling */
+.painter-logo {
+    filter: drop-shadow(0 4px 8px rgba(255, 140, 0, 0.3));
+    transition: all 0.3s ease;
+}
+
+.painter-logo:hover {
+    filter: drop-shadow(0 6px 12px rgba(255, 140, 0, 0.4));
+    transform: scale(1.05);
+}
+
+/* Navigation Enhancements */
+.navbar {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(45, 24, 16, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+}
+
+.logo-text {
+    background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Performance-Optimierungen */
+@media (prefers-reduced-motion: reduce) {
+    .brush-stroke::before,
+    .paint-drop,
+    .quality-seal,
+    .craftsman-badge::before {
+        animation: none;
+    }
+}
