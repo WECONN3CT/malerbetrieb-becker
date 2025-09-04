@@ -855,7 +855,6 @@ a {
     background: var(--bg-dark);
     color: var(--text-white);
     padding: var(--spacing-3xl) 0 var(--spacing-xl);
-    position: relative;
 }
 
 .footer-content {
@@ -910,22 +909,23 @@ a {
 .footer-bottom {
     padding-top: var(--spacing-xl);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
     color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
 }
 
 /* Footer credit logo */
 .footer-credit {
-    position: absolute;
-    right: var(--spacing-md);
-    bottom: var(--spacing-md);
-    height: 26px;
+    height: 18px;
     width: auto;
     opacity: 0.9;
 }
 
 @media (max-width: 768px) {
-    .footer-credit { height: 22px; right: var(--spacing-sm); bottom: var(--spacing-sm); }
+    .footer-bottom { flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); }
+    .footer-credit { height: 16px; }
 }
 
 /* ===== LEGAL PAGES ===== */
