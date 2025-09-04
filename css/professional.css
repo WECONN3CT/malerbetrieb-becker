@@ -335,6 +335,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 60%;
     transform: scale(1.06);
     transition: transform 0.8s ease;
 }
@@ -457,6 +458,7 @@ a {
 }
 
 @media (max-width: 768px) {
+    .hero-image-main img { object-position: center 50%; }
     .reviews-header { flex-direction: column; align-items: flex-start; gap: var(--spacing-sm); }
     .reviews-actions { width: 100%; justify-content: space-between; }
     .reviews-track { grid-auto-columns: 85%; }
