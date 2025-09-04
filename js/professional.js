@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initContactForm();
     initGalleryLinks();
+    syncHeroOfferStripWidth();
+    window.addEventListener('resize', syncHeroOfferStripWidth);
 });
 
 // Navigation scroll effect
@@ -311,4 +313,13 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+function syncHeroOfferStripWidth() {
+    const strip = document.getElementById('hero-offer-strip');
+    if (!strip) return;
+    const cta = document.querySelector('.hero-actions .btn.btn-secondary');
+    if (!cta) return;
+    const ctaWidth = cta.getBoundingClientRect().width;
+    strip.style.width = ctaWidth + 'px';
+}
 
