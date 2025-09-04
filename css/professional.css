@@ -1,38 +1,43 @@
+/* ========================================
+   Malerbetrieb Becker - Professional Design System
+   Version: 2.0 - Komplett überarbeitet
+   ======================================== */
 
-
+/* ===== FONTS ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap');
 
+/* ===== CSS VARIABLES ===== */
 :root {
-    
+    /* Hauptfarben */
     --primary: #FF6B35;
     --primary-dark: #E55A2B;
     --primary-light: #FF8C5F;
     --secondary: #2D3436;
     --secondary-light: #636E72;
     
-    
+    /* Textfarben */
     --text-primary: #2D3436;
     --text-secondary: #636E72;
     --text-light: #95A5A6;
     --text-white: #FFFFFF;
     
-    
+    /* Hintergründe */
     --bg-white: #FFFFFF;
     --bg-light: #F8F9FA;
     --bg-gray: #F1F3F5;
     --bg-dark: #2D3436;
     
-    
+    /* Schatten */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
     --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.15);
     
-    
+    /* Layout */
     --container-max: 1280px;
     --navbar-height: 72px;
     
-    
+    /* Abstände */
     --spacing-xs: 8px;
     --spacing-sm: 16px;
     --spacing-md: 24px;
@@ -41,7 +46,7 @@
     --spacing-2xl: 64px;
     --spacing-3xl: 96px;
     
-    
+    /* Border Radius */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
@@ -50,6 +55,7 @@
     --radius-full: 9999px;
 }
 
+/* ===== RESET ===== */
 *,
 *::before,
 *::after {
@@ -85,6 +91,7 @@ a {
     color: inherit;
 }
 
+/* ===== CONTAINER ===== */
 .container {
     width: 100%;
     max-width: var(--container-max);
@@ -92,6 +99,7 @@ a {
     padding: 0 var(--spacing-md);
 }
 
+/* ===== NAVIGATION ===== */
 .navbar {
     position: fixed;
     top: 0;
@@ -186,6 +194,7 @@ a {
     transition: all 0.3s ease;
 }
 
+/* ===== HERO SECTION ===== */
 .hero-section {
     padding-top: var(--navbar-height);
     min-height: 100vh;
@@ -270,6 +279,8 @@ a {
     gap: var(--spacing-md);
     flex-wrap: wrap;
 }
+
+
 
 .btn {
     display: inline-flex;
@@ -361,6 +372,7 @@ a {
     color: var(--text-secondary);
 }
 
+/* ===== SERVICES SECTION ===== */
 .google-reviews-section {
     padding: var(--spacing-2xl) 0;
     background: #fff;
@@ -547,6 +559,7 @@ a {
     gap: var(--spacing-sm);
 }
 
+/* ===== GALLERY SECTION ===== */
 .gallery-section {
     padding: var(--spacing-3xl) 0;
     background: var(--bg-white);
@@ -576,7 +589,7 @@ a {
 .gallery-image-container {
     position: relative;
     width: 100%;
-    height: auto; 
+    height: auto; /* allow natural image height */
     overflow: hidden;
     background: #f8f9fa;
 }
@@ -584,7 +597,7 @@ a {
 .gallery-image {
     position: static;
     width: 100%;
-    height: auto; 
+    height: auto; /* keep full image visible */
     object-fit: contain;
     display: block;
     transition: none;
@@ -621,6 +634,7 @@ a {
     opacity: 0.9;
 }
 
+/* ===== STATS SECTION ===== */
 .stats-section {
     padding: var(--spacing-2xl) 0;
     background: var(--bg-light);
@@ -651,6 +665,7 @@ a {
     font-weight: 500;
 }
 
+/* ===== CONTACT SECTION ===== */
 .contact-section {
     padding: var(--spacing-3xl) 0;
     background: var(--bg-white);
@@ -738,6 +753,7 @@ a {
     min-height: 120px;
 }
 
+/* ===== LIGHTBOX ===== */
 .lightbox {
     display: none;
     position: fixed;
@@ -786,6 +802,7 @@ a {
     opacity: 0.7;
 }
 
+/* ===== CTA SECTION ===== */
 .cta-section {
     background: var(--primary);
     color: var(--text-white);
@@ -833,6 +850,7 @@ a {
     transform: translateY(-2px);
 }
 
+/* ===== FOOTER ===== */
 .footer {
     background: var(--bg-dark);
     color: var(--text-white);
@@ -895,6 +913,7 @@ a {
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -999,6 +1018,7 @@ a {
     }
 }
 
+/* ===== UTILITIES ===== */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -1018,6 +1038,7 @@ a {
 .hidden { display: none !important; }
 .visible { display: block !important; }
 
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1063,6 +1084,7 @@ a {
     animation: slideInRight 0.6s ease-out;
 }
 
+/* ===== PRINT STYLES ===== */
 @media print {
     .navbar,
     .nav-toggle,
