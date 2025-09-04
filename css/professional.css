@@ -910,7 +910,20 @@ a {
     padding-top: var(--spacing-xl);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.5);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.footer-credit-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom { flex-wrap: wrap; justify-content: center; gap: var(--spacing-sm); text-align: center; }
 }
 
 /* Footer credit logo (removed) */
