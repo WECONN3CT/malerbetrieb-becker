@@ -365,7 +365,6 @@ document.addEventListener('visibilitychange', () => {
 if ('performance' in window) {
     window.addEventListener('load', () => {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        console.log(`Page loaded in ${loadTime}ms`);
     });
 }
 

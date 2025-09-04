@@ -268,8 +268,6 @@ function initContactForm() {
         const data = Object.fromEntries(formData);
         
         // Here you would normally send the data to a server
-        console.log('Form submitted:', data);
-        
         // Show success message
         const button = form.querySelector('button[type="submit"]');
         const originalText = button.innerText;
