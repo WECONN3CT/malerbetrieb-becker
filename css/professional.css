@@ -344,6 +344,26 @@ a {
     transform: scale(1.1);
 }
 
+/* Hero logo replacement */
+.hero-logo-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-xl);
+    background: var(--bg-white);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.hero-logo-img {
+    width: 65%;
+    max-width: 420px;
+    height: auto;
+}
+
 .hero-stat-card {
     position: absolute;
     background: var(--bg-white);
