@@ -260,6 +260,10 @@ function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
     
+    // Spam-Schutz: Mindestausfüllzeit und Honeypot
+    const formStartTime = Date.now();
+    const minFillTimeMs = 3000; // mindestens 3s bis zum Absenden
+    
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton ? submitButton.innerText : '';
     const formSubmitEndpoint = 'https://formsubmit.co/ajax/mentor.sadiku@weconn3ct.de';
@@ -273,6 +277,69 @@ function initContactForm() {
         }
         
         const formData = new FormData(form);
+        
+        // Honeypot prüfen (Feld muss leer sein)
+        const honeyValue = formData.get('_honey') || formData.get('_hpt') || '';
+        if (typeof honeyValue === 'string' && honeyValue.trim() !== '') {
+            if (submitButton) {
+                submitButton.innerText = 'Spam erkannt';
+                submitButton.style.background = '#c0392b';
+            }
+            setTimeout(() => {
+                if (submitButton) {
+                    submitButton.innerText = originalButtonText;
+                    submitButton.style.background = '';
+                    submitButton.disabled = false;
+                }
+            }, 3000);
+            return;
+        }
+        
+        // Mindest-Ausfüllzeit prüfen
+        const elapsed = Date.now() - formStartTime;
+        if (elapsed < minFillTimeMs) {
+            if (submitButton) {
+                submitButton.innerText = 'Bitte nicht so schnell';
+                submitButton.style.background = '#c0392b';
+            }
+            setTimeout(() => {
+                if (submitButton) {
+                    submitButton.innerText = originalButtonText;
+                    submitButton.style.background = '';
+                    submitButton.disabled = false;
+                }
+            }, 3000);
+            return;
+        }
+        
+        // E-Mail validieren (zusätzlich zu type="email"/pattern)
+        const emailInput = form.querySelector('input[name="email"]');
+        const email = emailInput ? emailInput.value.trim() : '';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        if (!email || !emailRegex.test(email)) {
+            if (emailInput) {
+                emailInput.classList.add('error');
+                emailInput.setAttribute('aria-invalid', 'true');
+                // HTML5-Fehlermeldung anzeigen
+                if (typeof emailInput.reportValidity === 'function') {
+                    emailInput.setCustomValidity('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+                    emailInput.reportValidity();
+                    emailInput.setCustomValidity('');
+                }
+            }
+            if (submitButton) {
+                submitButton.innerText = 'Ungültige E-Mail';
+                submitButton.style.background = '#c0392b';
+            }
+            setTimeout(() => {
+                if (submitButton) {
+                    submitButton.innerText = originalButtonText;
+                    submitButton.style.background = '';
+                    submitButton.disabled = false;
+                }
+            }, 3000);
+            return;
+        }
         
         try {
             const response = await fetch(formSubmitEndpoint, {
