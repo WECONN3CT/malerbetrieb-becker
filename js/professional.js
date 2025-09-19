@@ -260,31 +260,51 @@ function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
     
-    form.addEventListener('submit', function(e) {
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.innerText : '';
+    const formSubmitEndpoint = 'https://formsubmit.co/ajax/mentor.sadiku@weconn3ct.de';
+    
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        // Get form data
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.innerText = 'Senden...';
+        }
+        
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
         
-        // Here you would normally send the data to a server
-        console.log('Form submitted:', data);
-        
-        // Show success message
-        const button = form.querySelector('button[type="submit"]');
-        const originalText = button.innerText;
-        
-        button.innerText = 'Nachricht gesendet!';
-        button.style.background = '#27ae60';
-        button.disabled = true;
-        
-        // Reset form
-        setTimeout(() => {
+        try {
+            const response = await fetch(formSubmitEndpoint, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
+            });
+            
+            if (!response.ok) throw new Error('Request failed');
+            const result = await response.json();
+            if (!result.success) throw new Error('Submission not accepted');
+            
+            if (submitButton) {
+                submitButton.innerText = 'Nachricht gesendet!';
+                submitButton.style.background = '#27ae60';
+            }
+            
             form.reset();
-            button.innerText = originalText;
-            button.style.background = '';
-            button.disabled = false;
-        }, 3000);
+        } catch (error) {
+            if (submitButton) {
+                submitButton.innerText = 'Fehler beim Senden';
+                submitButton.style.background = '#c0392b';
+            }
+        } finally {
+            setTimeout(() => {
+                if (submitButton) {
+                    submitButton.innerText = originalButtonText;
+                    submitButton.style.background = '';
+                    submitButton.disabled = false;
+                }
+            }, 3000);
+        }
     });
 }
 
