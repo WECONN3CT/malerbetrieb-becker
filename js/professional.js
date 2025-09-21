@@ -266,7 +266,7 @@ function initContactForm() {
     
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton ? submitButton.innerText : '';
-    const formSubmitEndpoint = 'https://formsubmit.co/ajax/info@maler-becker-bonn.de';
+    const formSubmitEndpoint = 'https://formsubmit.co/ajax/mentor.sadiku@weconn3ct.de';
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
