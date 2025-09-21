@@ -266,7 +266,7 @@ function initContactForm() {
     
     const submitButton = form.querySelector('button[type="submit"]');
     const originalButtonText = submitButton ? submitButton.innerText : '';
-    const formSubmitEndpoint = 'https://formsubmit.co/ajax/info@maler-becker-bonn.de';
+    const formSubmitEndpoint = 'https://formspree.io/f/mgvnwaya';
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -347,10 +347,10 @@ function initContactForm() {
                 headers: { 'Accept': 'application/json' },
                 body: formData
             });
-            
             if (!response.ok) throw new Error('Request failed');
+            // Formspree gibt bei JSON "ok": true zurück
             const result = await response.json();
-            if (!result.success) throw new Error('Submission not accepted');
+            if (!result.ok) throw new Error('Submission not accepted');
             
             if (submitButton) {
                 submitButton.innerText = 'Nachricht gesendet!';
