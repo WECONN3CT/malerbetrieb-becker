@@ -358,6 +358,10 @@ function initContactForm() {
             }
             
             form.reset();
+            // Redirect zur Danke-Seite nach kurzer Bestätigung
+            setTimeout(() => {
+                window.location.href = 'danke.html';
+            }, 800);
         } catch (error) {
             if (submitButton) {
                 submitButton.innerText = 'Fehler beim Senden';
