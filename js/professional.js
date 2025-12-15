@@ -229,25 +229,8 @@ function initGalleryLinks() {
     if (!items.length) return;
     items.forEach(item => {
         item.style.cursor = 'pointer';
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            // Determine correct path based on current location
-            const isLocalFile = window.location.protocol === 'file:';
-            const currentPath = window.location.pathname;
-            let targetUrl;
-            if (isLocalFile) {
-                // For local file:// testing
-                const basePath = currentPath.substring(0, currentPath.lastIndexOf('/'));
-                targetUrl = basePath + '/projekte/index.html';
-            } else if (currentPath === '/' || currentPath.endsWith('/index.html') || currentPath === '/index.html') {
-                // On homepage - use relative path
-                targetUrl = 'projekte/index.html';
-            } else {
-                // On subpage - use absolute path
-                targetUrl = '/projekte/';
-            }
-            window.location.href = targetUrl;
+        item.addEventListener('click', function() {
+            window.location.href = '/projekte/';
         });
     });
 }
